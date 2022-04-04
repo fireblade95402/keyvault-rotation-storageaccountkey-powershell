@@ -90,6 +90,8 @@ Try{
     Write-Host "Key Vault Name: $keyVAultName"
     Write-Host "Secret Name: $secretName"
     
+    Connect-AzAccount -Identity
+    
     #Rotate secret
     Write-Host "Rotation started. Secret Name: $secretName"
     RoatateSecret $keyVAultName $secretName
