@@ -77,6 +77,8 @@ $keyVaultName = $eventGridEvent.data.VaultName
 Write-Host "Key Vault Name: $keyVAultName"
 Write-Host "Secret Name: $secretName"
 
+Connect-AzAccount -Identity
+
 #Rotate secret
 Write-Host "Rotation started."
 RoatateSecret $keyVAultName $secretName
